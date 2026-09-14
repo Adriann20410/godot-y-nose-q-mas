@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://mruwcojlv24y"]
+
+[ext_resource type="Script" uid="uid://cv4dg2nsn3t7d" path="res://jugador.gd" id="1_16k11"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kgtat"]
+
+[node name="Node3D" type="Node3D" unique_id=607850843]
+
+[node name="Jugador" type="CharacterBody3D" parent="." unique_id=1538629502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_16k11")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jugador" unique_id=190504652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_kgtat")
+
+[node name="Camera3D" type="Camera3D" parent="Jugador" unique_id=1535964536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Jugador/Camera3D" unique_id=491427795]
+target_position = Vector3(0, 0, -5)
+
+[node name="Interfaz" type="CanvasLayer" parent="Jugador" unique_id=1485431188]
+
+[node name="ContenedorUI" type="Control" parent="Jugador/Interfaz" unique_id=317906524]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 490.0
+offset_top = 583.0
+offset_right = 530.0
+offset_bottom = 623.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Jugador/Interfaz/ContenedorUI" unique_id=2103217408]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot0" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=658338986]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Slot1" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=682864449]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
