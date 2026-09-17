@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cw6h4eo7l3bhx"]
+
+[ext_resource type="Script" uid="uid://c0pkgp5uu7a4b" path="res://animal.gd" id="1_stvu6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abukt"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgtat"]
+material = SubResource("StandardMaterial3D_abukt")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kgtat"]
+
+[node name="Node3D" type="Node3D" unique_id=1991342986]
+
+[node name="Animal" type="CharacterBody3D" parent="." unique_id=1559372537]
+script = ExtResource("1_stvu6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Animal" unique_id=1447898919]
+mesh = SubResource("BoxMesh_kgtat")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Animal" unique_id=317800896]
+shape = SubResource("BoxShape3D_kgtat")

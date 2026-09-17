@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bx63lermss1cv"]
+
+[ext_resource type="Script" uid="uid://ckpmakor0iig4" path="res://enemigo.gd" id="1_becj5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_becj5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgtat"]
+
+[node name="Enemigo" type="CharacterBody3D" unique_id=919928971]
+script = ExtResource("1_becj5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=642930532]
+shape = SubResource("BoxShape3D_becj5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=707861816]
+mesh = SubResource("BoxMesh_kgtat")

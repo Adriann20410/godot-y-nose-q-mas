@@ -4,6 +4,9 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kgtat"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_kgtat"]
+custom_aabb = AABB(0.2, 0.2, 0.2, 0, 0, 0)
+
 [node name="Node3D" type="Node3D" unique_id=607850843]
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=1538629502]
@@ -19,6 +22,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Jugador/Camera3D" unique_id=491427795]
 target_position = Vector3(0, 0, -5)
+
+[node name="ManoItem" type="MeshInstance3D" parent="Jugador/Camera3D" unique_id=357402661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, -0.3, -0.5)
+mesh = SubResource("BoxMesh_kgtat")
 
 [node name="Interfaz" type="CanvasLayer" parent="Jugador" unique_id=1485431188]
 
@@ -40,6 +47,176 @@ offset_bottom = 40.0
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer/Slot0" unique_id=899069110]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Slot1" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=682864449]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer/Slot1" unique_id=1874335377]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot2" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=1215822677]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer/Slot2" unique_id=949964546]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot3" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=165258443]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer/Slot3" unique_id=111584141]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot4" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=118798769]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer/Slot4" unique_id=1409206422]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot5" type="Panel" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer" unique_id=1658260903]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/ContenedorUI/HBoxContainer/Slot5" unique_id=1465909937]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextoSalud" type="Label" parent="Jugador/Interfaz" unique_id=390579889]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PanelInventario" type="ColorRect" parent="Jugador/Interfaz" unique_id=1846065559]
+custom_minimum_size = Vector2(350, 300)
+offset_left = 335.0
+offset_top = 130.0
+offset_right = 685.0
+offset_bottom = 430.0
+color = Color(1.2032688e-08, 0.14150816, 0.1417714, 1)
+
+[node name="Slot6" type="Panel" parent="Jugador/Interfaz/PanelInventario" unique_id=1577315293]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6" unique_id=941356928]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot7" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6" unique_id=249040985]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 78.0
+offset_right = 142.0
+offset_bottom = 64.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7" unique_id=2063952809]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot8" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7" unique_id=259025469]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 78.0
+offset_top = 4.0
+offset_right = 142.0
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8" unique_id=1991302953]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 27.0
+
+[node name="Slot9" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8" unique_id=1664510329]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 86.0
+offset_top = 3.0
+offset_right = 150.0
+offset_bottom = 67.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9" unique_id=451524046]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot10" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9" unique_id=1925542220]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = -226.0
+offset_top = 70.0
+offset_right = -162.0
+offset_bottom = 134.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10" unique_id=716600395]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot0" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10" unique_id=2143930149]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 85.0
+offset_right = 149.0
+offset_bottom = 64.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10/Slot0" unique_id=1490361186]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot0" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10/Slot0" unique_id=1662207792]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 81.0
+offset_top = 3.0
+offset_right = 145.0
+offset_bottom = 67.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10/Slot0/Slot0" unique_id=675428336]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Slot0" type="Panel" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10/Slot0/Slot0" unique_id=1267835097]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 93.0
+offset_top = 2.0
+offset_right = 157.0
+offset_bottom = 66.0
+
+[node name="Label" type="Label" parent="Jugador/Interfaz/PanelInventario/Slot6/Slot7/Slot8/Slot9/Slot10/Slot0/Slot0/Slot0" unique_id=1253515783]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextoHambre" type="Label" parent="Jugador/Interfaz" unique_id=152239841]
+offset_left = 3.0
+offset_top = 95.0
+offset_right = 43.0
+offset_bottom = 118.0
+
+[node name="TextoEstamina" type="Label" parent="Jugador/Interfaz" unique_id=1065740792]
+offset_left = 1.0
+offset_top = 55.0
+offset_right = 41.0
+offset_bottom = 78.0
